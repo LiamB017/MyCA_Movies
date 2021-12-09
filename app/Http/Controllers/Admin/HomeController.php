@@ -11,14 +11,11 @@ class HomeController extends Controller
     public function _construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:user');
+        $this->middleware('role:admin');
     }
     public function index()
     {
-        $user = Auth::user();
-
-        $user->authorizeRoles('admin');
-        
+       
         return view('admin.home');
     }
 }

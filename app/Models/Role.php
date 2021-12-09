@@ -12,6 +12,6 @@ class Role extends Model
     //This function tells laravel that a role can have many users
     public function users()
     {
-        return $this->belongsToMany('App\Models\Users', 'user_role');
+        return $this->belongsToMany('App\Models\User', 'user_role');
     }
 }

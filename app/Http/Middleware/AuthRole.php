@@ -14,7 +14,8 @@ class AuthRole
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    
+    public function handle(Request $request, Closure $next, String $role)
     {
         if (!$request->user() || !$request->user()->hasRole($role)) {
             return redirect()->route('home');

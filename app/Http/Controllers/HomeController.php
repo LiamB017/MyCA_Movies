@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -26,10 +27,10 @@ class HomeController extends Controller
         $user = Auth::user();
         $home = 'home';
 
-        if($user->hasRole('admin')){
+        if($user->hasRole('admin')) {
             $home = 'admin.home';
         }
-        else if ($user->hasRole('user')){
+        else if ($user->hasRole('user')) {
             $home = 'user.home';
         }
         return redirect()->route($home);
