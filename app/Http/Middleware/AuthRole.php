@@ -15,7 +15,7 @@ class AuthRole
      * @return mixed
      */
     
-    public function handle(Request $request, Closure $next, String $role)
+    public function handle(Request $request, Closure $next,  String $role)
     {
         if (!$request->user() || !$request->user()->hasRole($role)) {
             return redirect()->route('home');

@@ -10,9 +10,10 @@ class HomeController extends Controller
 {
     public function _construct()
     {
-        $this->middleware('auth');
-        $this->middleware('role:admin');
+     $this->middleware('auth');
+     $this->middleware('role:admin');
     }
+    //  @return \Illuminate\Contracts\Support\Renderable
     public function index()
     {
        
