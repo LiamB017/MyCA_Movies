@@ -16,37 +16,37 @@
                               <tr>
                           <thead>
                               <td>Title</td>
-                              <td>{{ $movies->title }}</td>
+                              <td>{{ $movie->title }}</td>
 </tr>
 <tr>
                           <thead>
                               <td>Genre</td>
-                              <td>{{ $movies->description }}</td>
+                              <td>{{ $movie->genre }}</td>
 </tr>
 <tr>
                           <thead>
-                              <td>Release_date</td>
-                              <td>{{ $movies->location }}</td>
+                              <td>Release Year</td>
+                              <td>{{ $movie->release_year }}</td>
 </tr>
 <tr>
                           <thead>
                               <td>Description</td>
-                              <td>{{ $movies->start_date }}</td>
+                              <td>{{ $movie->description }}</td>
 </tr>
 <tr>
                           <thead>
                               <td>Director</td>
-                              <td>{{ $movies->end_date }}</td>
+                              <td>{{ $movie->director }}</td>
 </tr>
 <tr>
                           <thead>
-                              <td>Age_rating</td>
-                              <td>{{ $movies->contact_name }}</td>
+                              <td>Age Rating</td>
+                              <td>{{ $movie->age_rating }}</td>
 </tr>
 <tr>
                           <thead>
-                              <td>Run_time</td>
-                              <td>{{ $movies->contact_email }}</td>
+                              <td>Run Time</td>
+                              <td>{{ $movie->run_time }}</td>
 </tr>
 <tr>
                   

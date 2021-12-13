@@ -4,6 +4,8 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// Allow index fuction to use the Movie model
+use App\Models\Movie;
 
 class MovieController extends Controller
 {

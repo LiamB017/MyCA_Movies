@@ -5,7 +5,9 @@
     <div class="row ">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Movies</div>
+                <div class="card-header">Movies
+                    
+                </div>
 
                 <div class="card-body">
                     @if (count($movies)=== 0)
@@ -15,11 +17,11 @@
                           <thead>
                               <th>Title</th>
                               <th>Genre</th>
-                              <th>Release_date</th>
+                              <th>Release Year</th>
                               <th>Description</th>
                               <th>Director</th>
-                              <th>Age_rating</th>
-                              <th>Run_time</th>
+                              <th>Age Rating</th>
+                              <th>Run Time</th>
                               <th></th>
 </thead>
 <tbody>
@@ -27,12 +29,14 @@
     <tr data-id="{{ $movie->id }}">
         <td>{{ $movie->title}}</td>
         <td>{{ $movie->genre}}</td>
-        <td>{{ $movie->release_date}}</td>
+        <td>{{ $movie->release_year}}</td>
         <td>{{ $movie->description}}</td>
+        <td>{{ $movie->director}}</td>
         <td>{{ $movie->age_rating}}</td>
         <td>{{ $movie->run_time}}</td>
+
         <td>
-            <a href="{{ route('user.movies.show', $movie->$id) }}" class="btn btn-primary">View</a>
+            <a href="{{ route('user.movies.show', $movie->id) }}" class="btn btn-primary">View</a>
 </form>
 </td>
 </tr>
