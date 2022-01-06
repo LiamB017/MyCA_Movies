@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in as admin!') }}
+                    <a href="{{ route('admin.movies.index')}}"> View All Movies</a>
                 </div>
             </div>
         </div>

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 // Importing the MovieController 
 use App\Http\Controllers\User\MovieController as UserMovieController;
 
+use App\Http\Controllers\Admin\MovieController as AdminMovieController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +32,13 @@ Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index
 //These are the routes for user functionality
 Route::get('/user/movies/', [UserMovieController::class, 'index'])->name('user.movies.index');
 Route::get('user/movies/{id}', [UserMovieController::class, 'show'])->name('user.movies.show');
+
+//These are the routes for admin functionality
+Route::get('/admin/movies/', [AdminMovieController::class, 'index'])->name('admin.movies.index');
+Route::get('admin/movies/create', [AdminMovieController::class, 'create'])->name('admin.movies.create');
+Route::get('/admin/movies/{id}', [AdminMovieController::class, 'show'])->name('admin.movies.show');
+Route::post('admin/movies/store', [AdminMovieController::class, 'store'])->name('admin.movies.store');
+Route::get('/admin/movies{id}edit', [AdminMovieController::class, 'edit'])->name('admin.movies.edit');
+Route::put('admin/movies/{id}', [AdminMovieController::class, 'update'])->name('admin.movies.update');
+Route::delete('/admin/movies/{id}', [AdminMovieController::class, 'destroy'])->name('admin.movies.destroy');
+
