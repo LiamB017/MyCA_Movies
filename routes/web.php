@@ -24,12 +24,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// These routes bring the users to the corresponding home page
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// These routes bring the users to the corresponding home page, based on the user's role
 
 Route::get('admin/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home');
 Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('user.home');
 
-//These are the routes for user functionality
+//These are the routes for user functionality, in each route, UserMovieController is called
+// along with the index or show function
 Route::get('/user/movies/', [UserMovieController::class, 'index'])->name('user.movies.index');
 Route::get('user/movies/{id}', [UserMovieController::class, 'show'])->name('user.movies.show');
 
