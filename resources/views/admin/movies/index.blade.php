@@ -19,7 +19,7 @@
                           <thead>
                               <th>Title</th>
                               <th>Genre</th>
-                              <th>Release Year</th>
+                              <th>Release </th>
                               <th>Description</th>
                               <th>Director</th>
                               <th>Age Rating</th>

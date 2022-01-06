@@ -31,8 +31,8 @@
                 <input type="text" class="form-control" id="genre" name="genre" value="{{ old('genre') }}" />
               </div>
               <div class="form-group">
-                <label for="release_year">Release_year</label>
-                <input type="text" class="form-control" id="release_year" name="release_year" value="{{ old('release_year') }}" />
+                <label for="release_year">Relase</label>
+                <input type="date" class="form-control" id="release_year" name="release_year" value="{{ old('release_year') }}" />
               </div>
               <div class="form-group">
                 <label for="start_date"> Description</label>

@@ -33,7 +33,7 @@
                 <input type="text" class="form-control" id="genre" name="genre" value="{{ old('genre', $movie->genre) }}" />
               </div>
               <div class="form-group">
-                <label for="release_year">Release Year</label>
+                <label for="release_year">Release </label>
                 <input type="date" class="form-control" id="release_year" name="release_year" value="{{ old('release_year', $movie->release_year) }}" />
               </div>
               <div class="form-group">

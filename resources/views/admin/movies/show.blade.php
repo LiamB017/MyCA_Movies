@@ -25,7 +25,7 @@
 </tr>
 <tr>
                           <thead>
-                              <td>Release Year</td>
+                              <td>Release </td>
                               <td>{{ $movie->release_year }}</td>
 </tr>
 <tr>
