@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in as an ordinary user!') }}
+        You are logged in as an ordinary user! <a href="{{route('user.movies.index')}}"> View All Movies</a>
                 </div>
             </div>
         </div>
