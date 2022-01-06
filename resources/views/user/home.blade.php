@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<!-- This page let's the user know they are an ordinary user and allows them to view movies by
+clicking View All Movies, the user.movies.index route is used. -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

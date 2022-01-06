@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<!-- This page displays all movies from the database, 
+each movie can be viewed individually, edited or deleted -->
+
 @section('content')
 <div class="container">
     <div class="row ">
@@ -38,6 +41,7 @@
         <td>{{ $movie->run_time}}</td>
 
         <td>
+            <!-- routes to admin functionality views, movie id's are passed in -->
         <a href="{{ route('admin.movies.show', $movie->id) }}" class="btn btn-primary">View</a>
         <a href="{{ route('admin.movies.edit', $movie->id) }}" class="btn btn-warning">Edit</a>
    <form style="display:inline-" method="POST" action="{{ route('admin.movies.destroy', $movie->id) }}">

@@ -1,4 +1,6 @@
 <?php
+// This admin home controller uses auth to check if a user has the role of admin
+// It also returns the admin home view
 
 namespace App\Http\Controllers\Admin;
 

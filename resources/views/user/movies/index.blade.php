@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<!-- This page displays all movies from the database, each movie can be viewed individually by
+using the view button, this button uses the route user.movies.show -->
+
 @section('content')
 <div class="container">
     <div class="row ">

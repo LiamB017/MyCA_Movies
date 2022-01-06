@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- This view shows a previously selected movie individually, along with all of it's info -->
+
 @section('content')
 <div class="container">
     <div class="row ">

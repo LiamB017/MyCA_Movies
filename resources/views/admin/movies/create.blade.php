@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<!-- This is the view in which users may add a new movie, admin.movies.store saves the 
+movie to the database and allows it to be displayed on the index page once submitted -->
+
 @section ('content')
   <div class="container">
     <div class="row">

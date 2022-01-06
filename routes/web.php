@@ -33,7 +33,9 @@ Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index
 Route::get('/user/movies/', [UserMovieController::class, 'index'])->name('user.movies.index');
 Route::get('user/movies/{id}', [UserMovieController::class, 'show'])->name('user.movies.show');
 
-//These are the routes for admin functionality
+//These are the routes for admin functionality views, in each route, the AdminMovieController is called
+// aswell as the corresponding function
+
 Route::get('/admin/movies/', [AdminMovieController::class, 'index'])->name('admin.movies.index');
 Route::get('admin/movies/create', [AdminMovieController::class, 'create'])->name('admin.movies.create');
 Route::get('/admin/movies/{id}', [AdminMovieController::class, 'show'])->name('admin.movies.show');

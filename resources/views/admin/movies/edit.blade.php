@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- Users may edit an already existing movie in the database, admin.movies.update is used to
+save the changes made to a movie -->
 @section ('content')
   <div class="container">
     <div class="row">

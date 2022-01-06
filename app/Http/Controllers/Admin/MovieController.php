@@ -14,9 +14,12 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+        // 
     public function index()
     {
-        //
+        // Use the Movie model
+        // Return movie data 
+        // Place all the returned movies into a movie argument, which is passed into the view
         $movies = Movie::all();
         return view('admin.movies.index', [
             'movies' => $movies
@@ -76,7 +79,7 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+        // Get the movie from the database, load the show view and pass in the movie
         $movie = Movie::findOrFail($id);
 
         return view('admin.movies.show' , [
@@ -92,10 +95,10 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-   // get the festival by ID from the Database
+   // get the movie by ID from the Database
    $movie = Movie::findOrFail($id);
 
-   // Load the edit view and pass the festival to
+   // Load the edit view and pass the movie into
    // that view
    return view('admin.movies.edit', [
        'movie' => $movie
@@ -111,7 +114,7 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-       // first get the existing festival that the user is update
+       // first get the existing movie that the user is updating
        $movie = Movie::findOrFail($id);
        $request->validate([
         'title' => 'required',
@@ -124,7 +127,7 @@ class MovieController extends Controller
         
        ]);
 
-       // if validation passes then update existing festival
+       // if validation passes then update existing movie
        $movie->title = $request->input('title');
         $movie->genre = $request->input('genre');
         $movie->release_year = $request->input('release_year');
@@ -145,7 +148,8 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get the selected movie from the database by ID
+        // Delete the selected movie and return to index page
         $movie = Movie::findOrFail($id);
         $movie->delete();
 
